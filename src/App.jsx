@@ -1,35 +1,35 @@
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
+// import { Button } from 'react-bootstrap'
 import './App.css'
-import { Button } from 'react-bootstrap'
+import Header from './components/Header/Header'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
-  const handleAlert = () => {
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
-      }
-    })
-  }
+  // const handleAlert = () => {
+  //   Swal.fire({
+  //     title: 'Are you sure?',
+  //     text: "You won't be able to revert this!",
+  //     icon: 'warning',
+  //     showCancelButton: true,
+  //     confirmButtonColor: '#3085d6',
+  //     cancelButtonColor: '#d33',
+  //     confirmButtonText: 'Yes, delete it!'
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       Swal.fire(
+  //         'Deleted!',
+  //         'Your file has been deleted.',
+  //         'success'
+  //       )
+  //     }
+  //   })
+  // }
 
   return (
     <>
-      <div className='text-center'>
-        <h1 className='my-3'>User Management System</h1>
-        <Button onClick={handleAlert} variant="primary">Primary</Button>
-      </div>
+      <Header />
+      <Outlet />
     </>
   )
 }

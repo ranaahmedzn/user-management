@@ -1,0 +1,7 @@
+table thead tr{
+    background-color: rgba(13, 13, 56, 0.842);
+}
+table tr th, table tr td{
+    text-align: center;
+    padding: 10px 0;
+}
